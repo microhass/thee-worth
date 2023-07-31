@@ -1,10 +1,9 @@
 import React from 'react';
-import { Typography } from '@mui/material';
-// import Rocket from './rockets/Rocket';
+import Companies from './companies';
 
 const Home = () => (
   <>
-    {/* <Rocket /> */}
+    <Companies />
   </>
 );
 

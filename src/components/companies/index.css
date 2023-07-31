@@ -1,0 +1,41 @@
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+  /* grid-template-columns: 1fr; */
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* @media screen and (min-width: 520px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+} */
+
+.card {
+  transition: all 0.3s ease-in-out !important;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  background-color: rgba(0, 166, 255, 0.178);
+}
+
+.card-content {
+  display: grid;
+  gap: 1rem;
+}
+
+.card-content span {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.1rem;
+  align-items: center;
+}
+
+.card-content .icon {
+  font-size: 1.3rem;
+  color: #004eeb;
+}
