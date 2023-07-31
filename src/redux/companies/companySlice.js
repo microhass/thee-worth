@@ -8,6 +8,8 @@ const companiesURL = `http://localhost:5000/worth/list`;
 
 // https://financialmodelingprep.com/api/v3/nasdaq_constituent?apikey=d2e23b8b453a3c91403469a1b257f436
 // https://financialmodelingprep.com/api/v3/dowjones_constituent?apikey=d2e23b8b453a3c91403469a1b257f436
+const companyURL = 'http://localhost:5000/worth/stock';
+const companyURL2 = 'http://localhost:5000/worth/profile';
 
 export const fetchCompanies = createAsyncThunk(
   'companies/fetch',

@@ -1,10 +1,9 @@
 import { Stack, TextField } from '@mui/material';
 import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { companyActions } from '../redux/companies/companySlice';
 
 const SearchBar = () => {
-  const { companies } = useSelector((state) => state.companies);
   const [query, setQuery] = useState('');
   const dispatch = useDispatch();
 
