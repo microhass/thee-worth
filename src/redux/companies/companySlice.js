@@ -28,7 +28,7 @@ const companySlice = createSlice({
   initialState,
   reducers: {
     filterData: (state, action) => {
-      const query = action.payload.toLowerCase();
+      const query = action.payload.query.toLowerCase();
       const filteredData = state.companies.filter(
         (item) =>
           item.name.toLowerCase().includes(query) ||

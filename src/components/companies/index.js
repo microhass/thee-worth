@@ -2,12 +2,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchCompanies } from '../../redux/companies/companySlice';
 import { useEffect } from 'react';
 import Company from './Company';
-import './index.css'
+import './index.css';
 
 const Companies = () => {
   const dispatch = useDispatch();
 
-  const { companies, isLoading } = useSelector(
+  const { companies, queryResults, isLoading } = useSelector(
     (state) => state.companies
   );
 
@@ -17,9 +17,13 @@ const Companies = () => {
   }, [dispatch, companies?.length]);
 
   if (isLoading) return <div className='loading'>Loading...</div>;
+
+  if (queryResults.length === 0)
+    return <div className='loading'>No results found!</div>;
+
   return (
     <main>
-      {companies.map((company, i) => (
+      {queryResults.map((company, i) => (
         <Company key={`${company.symbol}${i}`} company={company} />
       ))}
     </main>
