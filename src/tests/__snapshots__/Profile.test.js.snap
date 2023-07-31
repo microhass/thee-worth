@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile Component should render the profile page 1`] = `
+<DocumentFragment>
+  <section
+    class="profile"
+  >
+    <div
+      class="profile-missions"
+    >
+      <h3
+        class="title"
+      >
+        my missions
+      </h3>
+      <ul
+        class="list"
+      >
+        <li
+          class="item"
+        >
+          <span>
+            Mission 2
+          </span>
+          <button
+            class="leave"
+            type="button"
+          >
+            leave mission
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="profile-rockets"
+    >
+      <h3
+        class="title"
+      >
+        my rockets
+      </h3>
+      <ul
+        class="list"
+      >
+        <li
+          class="item"
+        >
+          <span>
+            Rocket 1
+          </span>
+          <button
+            class="leave"
+            type="button"
+          >
+            cancel reservation
+          </button>
+        </li>
+        <li
+          class="item"
+        >
+          <span>
+            Rocket 2
+          </span>
+          <button
+            class="leave"
+            type="button"
+          >
+            cancel reservation
+          </button>
+        </li>
+      </ul>
+    </div>
+  </section>
+</DocumentFragment>
+`;

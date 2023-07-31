@@ -1,0 +1,62 @@
+.App {
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  text-transform: capitalize;
+}
+
+a:active,
+a:visited,
+a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+a.active {
+  text-decoration: underline;
+}
+
+button {
+  border: none;
+  background-color: inherit;
+  outline: none;
+  cursor: pointer;
+}
+
+.loading {
+  height: 40vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+}
+
+.error {
+  color: red;
+  display: grid;
+  place-items: center;
+  height: 20rem;
+  font-size: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}

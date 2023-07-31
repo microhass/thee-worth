@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components rendering should render fetched missions 1`] = `
+<DocumentFragment>
+  <div
+    class="loading"
+  >
+    Loading...
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Components rendering should render fetched rockets 1`] = `
+<DocumentFragment>
+  <div
+    class="loading"
+  >
+    Loading...
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Components rendering should render the profile component 1`] = `
+<DocumentFragment>
+  <section
+    class="profile"
+  >
+    <div
+      class="profile-rockets"
+    >
+      <h3
+        class="title"
+      >
+        my rockets
+      </h3>
+      <ul
+        class="list"
+      >
+        <li
+          class="item"
+        >
+          no rockets reserved
+        </li>
+      </ul>
+    </div>
+    <div
+      class="profile-missions"
+    >
+      <h3
+        class="title"
+      >
+        my missions
+      </h3>
+      <ul
+        class="list"
+      >
+        <li
+          class="item"
+        >
+          no missions joined
+        </li>
+      </ul>
+    </div>
+  </section>
+</DocumentFragment>
+`;
