@@ -8,12 +8,12 @@
   margin: 0;
 }
 
-ul {
+/* ul {
   list-style-type: none;
   display: flex;
   gap: 20px;
   text-transform: capitalize;
-}
+} */
 
 a:active,
 a:visited,
@@ -47,16 +47,4 @@ button {
   place-items: center;
   height: 20rem;
   font-size: 20px;
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-th,
-td {
-  border: 1px solid #ddd;
-  text-align: left;
-  padding: 8px;
 }
