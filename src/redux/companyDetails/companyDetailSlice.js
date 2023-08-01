@@ -23,6 +23,7 @@ export const fetchCompanyDetails = createAsyncThunk(
 const initialState = {
   companyDetails: {},
   isLoading: false,
+  isError: false,
 };
 
 const companyDetailSlice = createSlice({
@@ -34,13 +35,58 @@ const companyDetailSlice = createSlice({
       state.isLoading = true;
     });
 
+    builder.addCase(fetchCompanyDetails.rejected, (state) => {
+      state.isLoading = false;
+      state.isError = true;
+    });
+
     builder.addCase(
       fetchCompanyDetails.fulfilled,
       (state, action) => {
         state.isLoading = false;
-        const companyDetails = action.payload;
-        const [d1, d2] = companyDetails
-        state.companyDetails = { ...d1, ...d2 };
+        let companyDetails = action.payload;
+        const [d1, d2] = companyDetails;
+        companyDetails = { ...d1, ...d2 };
+        const {
+          image,
+          website,
+          name,
+          address,
+          country,
+          phone,
+          ceo,
+          exchange,
+          fullTimeEmployees,
+          marketCap,
+          price,
+          previousClose,
+          open,
+          dayLow,
+          dayHigh,
+          yearLow,
+          yearHigh,
+        } = companyDetails;
+        state.companyDetails = {
+          image,
+          website,
+          name,
+          address,
+          country,
+          phone,
+          ceo,
+          details: [
+            { key: 'Exchange', value: exchange },
+            { key: 'Full Time Employees', value: fullTimeEmployees },
+            { key: 'Market Capital', value: marketCap },
+            { key: 'Price', value: price },
+            { key: 'Previous Close', value: previousClose },
+            { key: 'Today Open', value: open },
+            { key: 'Day Low', value: dayLow },
+            { key: 'Day High', value: dayHigh },
+            { key: 'Year Low', value: yearLow },
+            { key: 'Year High', value: yearHigh },
+          ],
+        };
       }
     );
   },
