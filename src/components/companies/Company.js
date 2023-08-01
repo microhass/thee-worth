@@ -1,7 +1,5 @@
-import { Person } from '@mui/icons-material';
 import { BsBuilding } from 'react-icons/bs';
-import { TbBuildingCottage, TbReportMoney } from 'react-icons/tb';
-import { FaExchangeAlt } from 'react-icons/fa';
+import { TbBuildingCommunity, TbFocusCentered, TbPlant } from 'react-icons/tb';
 import {
   Box,
   Card,
@@ -14,7 +12,7 @@ import { Link } from 'react-router-dom';
 const Company = ({ company }) => {
   return (
     <Box width={'250px'} margin={'0 auto'}>
-      <Link to={`/${company.symbol}`}>
+      <Link to={`/company/${company.symbol}`}>
         <Card elevation={4} className='card'>
           <CardContent>
             <Stack
@@ -34,19 +32,25 @@ const Company = ({ company }) => {
               color={'text.secondary'}
             >
               <span>
-                <TbBuildingCottage className='icon' />
+                <TbBuildingCommunity className='icon' />
                 <h6>Name</h6>
                 <h6>{company.name}</h6>
               </span>
               <span>
-                <TbReportMoney className='icon' />
+                <TbFocusCentered className='icon' />
                 <h6>Sector</h6>
                 <h6>{company.sector}</h6>
               </span>
               <span>
-                <FaExchangeAlt className='icon' />
-                <h6>Founded In</h6>
-                <h6>{company.founded}</h6>
+                <TbPlant className='icon' />
+                <h6>Founded</h6>
+                <h6>
+                  {new Date(company.founded).toLocaleString('en-us', {
+                    day: 'numeric',
+                    month: 'long',
+                    year: 'numeric',
+                  })}
+                </h6>
               </span>
             </Typography>
           </CardContent>
