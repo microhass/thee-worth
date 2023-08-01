@@ -55,6 +55,7 @@ const companyDetailSlice = createSlice({
           country,
           phone,
           ceo,
+          description,
           exchange,
           fullTimeEmployees,
           marketCap,
@@ -74,6 +75,7 @@ const companyDetailSlice = createSlice({
           country,
           phone,
           ceo,
+          description,
           details: [
             { key: 'Exchange', value: exchange },
             { key: 'Full Time Employees', value: fullTimeEmployees },

@@ -2,6 +2,7 @@ import { Link, useParams } from 'react-router-dom';
 import { fetchCompanyDetails } from '../../redux/companyDetails/companyDetailSlice';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { TbMapPin, TbPhoneCall } from 'react-icons/tb';
 
 import {
   Avatar,
@@ -38,7 +39,7 @@ const CompanyDetails = () => {
   return (
     <div className='company'>
       <div className='intro'>
-        <Link to={company.website}>
+        <Link to={company.website} target='_blank'>
           <Avatar
             sx={{ width: 50, height: 50 }}
             src={company.image}
@@ -51,13 +52,16 @@ const CompanyDetails = () => {
         </Link>
         <div className='location'>
           <span>
-            💥 {company.address}, {company.country}
+            <TbMapPin className='icon' /> {company.address},{' '}
+            {company.country}
           </span>
-          <span>💥 {company.phone}</span>
+          <span>
+            <TbPhoneCall className='icon' /> {company.phone}
+          </span>
         </div>
       </div>
 
-      <TableContainer component={Paper}>
+      <TableContainer component={Paper} id='company-table'>
         <Table stickyHeader>
           <TableHead>
             <TableRow>
@@ -77,8 +81,8 @@ const CompanyDetails = () => {
         </Table>
       </TableContainer>
 
-      <Paper>
-        <h5>Description</h5>
+      <Paper id='desc'>
+        <h5>About {company.name}</h5>
         <Typography>{company.description}</Typography>
       </Paper>
     </div>
