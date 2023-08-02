@@ -15,6 +15,7 @@
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
   - [🚀 Live Demo ](#-live-demo-)
+  - [Video Presentation Link](#video-presentation-link)
   - [💻 Getting Started ](#-getting-started-)
     - [Install](#install)
     - [Run tests](#run-tests)
@@ -55,6 +56,9 @@
 
 <a href="https://thee-worth.netlify.app/"> See Project 🚀 </a>
 
+## Video Presentation Link
+
+<a href="https://drive.google.com/file/d/1fZugim9afO_zmPtAEazxJr7Ss5hLzbgm/view?usp=sharing"> React capstone video </a>
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
