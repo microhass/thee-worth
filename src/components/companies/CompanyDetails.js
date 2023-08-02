@@ -74,7 +74,19 @@ const CompanyDetails = () => {
             {company.details?.map(({ key, value }) => (
               <TableRow key={key}>
                 <TableCell>{key}</TableCell>
-                <TableCell>{value}</TableCell>
+                <TableCell>
+                  {key === 'Exchange'
+                    ? value
+                    : key === 'Full Time Employees'
+                    ? new Intl.NumberFormat(
+                        navigator.language,
+                        {}
+                      ).format(value)
+                    : new Intl.NumberFormat(navigator.language, {
+                        style: 'currency',
+                        currency: 'USD',
+                      }).format(value)}
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>

@@ -15,7 +15,7 @@ const App = () => (
         <Route index path='/home' element={<Home />} />
         <Route
           index
-          path='/:companyCode'
+          path='/company/:companyCode'
           element={<CompanyDetails />}
         />
         <Route path='*' element={<Error />} />

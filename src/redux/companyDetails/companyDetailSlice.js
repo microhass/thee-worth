@@ -78,9 +78,9 @@ const companyDetailSlice = createSlice({
           description,
           details: [
             { key: 'Exchange', value: exchange },
-            { key: 'Full Time Employees', value: fullTimeEmployees },
             { key: 'Market Capital', value: marketCap },
-            { key: 'Price', value: price },
+            { key: 'Full Time Employees', value: fullTimeEmployees },
+            { key: 'Current Price', value: price },
             { key: 'Previous Close', value: previousClose },
             { key: 'Today Open', value: open },
             { key: 'Day Low', value: dayLow },

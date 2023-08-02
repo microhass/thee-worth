@@ -18,7 +18,7 @@ const Companies = () => {
 
   if (isLoading) return <div className='loading'>Loading...</div>;
 
-  if (queryResults.length === 0)
+  if (queryResults?.length === 0)
     return <div className='loading'>No results found!</div>;
 
   return (

@@ -1,7 +1,5 @@
-import { Person } from '@mui/icons-material';
 import { BsBuilding } from 'react-icons/bs';
-import { TbBuildingCottage, TbReportMoney } from 'react-icons/tb';
-import { FaExchangeAlt } from 'react-icons/fa';
+import { TbBuildingCommunity, TbFocusCentered, TbPlant } from 'react-icons/tb';
 import {
   Box,
   Card,
@@ -14,7 +12,7 @@ import { Link } from 'react-router-dom';
 const Company = ({ company }) => {
   return (
     <Box width={'250px'} margin={'0 auto'}>
-      <Link to={`/${company.symbol}`}>
+      <Link to={`/company/${company.symbol}`}>
         <Card elevation={4} className='card'>
           <CardContent>
             <Stack
@@ -34,19 +32,25 @@ const Company = ({ company }) => {
               color={'text.secondary'}
             >
               <span>
-                <TbBuildingCottage className='icon' />
+                <TbBuildingCommunity className='icon' />
                 <h6>Name</h6>
                 <h6>{company.name}</h6>
               </span>
               <span>
-                <TbReportMoney className='icon' />
+                <TbFocusCentered className='icon' />
                 <h6>Sector</h6>
                 <h6>{company.sector}</h6>
               </span>
               <span>
-                <FaExchangeAlt className='icon' />
-                <h6>Founded In</h6>
-                <h6>{company.founded}</h6>
+                <TbPlant className='icon' />
+                <h6>Founded</h6>
+                <h6>
+                  {new Date(company.founded).toLocaleString('en-us', {
+                    day: 'numeric',
+                    month: 'long',
+                    year: 'numeric',
+                  })}
+                </h6>
               </span>
             </Typography>
           </CardContent>
@@ -57,23 +61,3 @@ const Company = ({ company }) => {
 };
 
 export default Company;
-
-//  {
-//     "symbol" : "SPY",
-//     "name" : "SPDR S&P 500 ETF Trust",
-//     "price" : 441.4,
-//     "exchange" : "New York Stock Exchange Arca",
-//     "exchangeShortName" : "NYSE",
-//     "type" : "etf"
-//   }
-
-//
-//   symbol: 'AMGN',
-//   name: 'Amgen Inc.',
-//   sector: 'Healthcare',
-//   subSector: 'Healthcare',
-//   headQuarter: 'Thousand Oaks, CA',
-//   dateFirstAdded: '2020-08-31',
-//   cik: '0000318154',
-//   founded: '1980-04-08',
-// },
