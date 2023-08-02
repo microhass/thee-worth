@@ -1,7 +1,5 @@
 main {
   display: grid;
-
-  /* grid-template-columns: repeat(5, 1fr); */
   grid-template-columns: repeat(auto-fit, minmax(270px, auto));
   padding-top: 3rem;
   background-color: #458ace;
@@ -44,4 +42,14 @@ main {
 .card-content .icon {
   font-size: 1.3rem;
   color: #004eeb;
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: repeat(auto-fit, minmax(170px, auto));
+  }
+
+  #card-container {
+    max-width: 200px;
+  }
 }

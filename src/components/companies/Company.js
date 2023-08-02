@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { BsBuilding } from 'react-icons/bs';
+import { BsBuilding, BsArrowRightCircle } from 'react-icons/bs';
 import {
   Box,
   Stack,
@@ -27,6 +27,9 @@ const Company = ({ company }) => (
           className="card-content"
           color="text.secondary"
         >
+          <span>
+            <BsArrowRightCircle fontSize="1.3rem" />
+          </span>
           <span>
             <h6>{company.name}</h6>
           </span>
