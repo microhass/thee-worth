@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Header from './components/Header';
 import Error from './components/Error';
-
+import CompanyDetails from './components/companies/CompanyDetails';
 import './App.css';
 
 const App = () => (
@@ -11,8 +11,12 @@ const App = () => (
     <Routes>
       <Route path="/" element={<Header />}>
         <Route index element={<Home />} />
-        <Route index path="/rockets" element={<Home />} />
-        {/* <Route index path="/profile" element={<Profile />} /> */}
+        <Route index path="/home" element={<Home />} />
+        <Route
+          index
+          path="/company/:companyCode"
+          element={<CompanyDetails />}
+        />
         <Route path="*" element={<Error />} />
       </Route>
     </Routes>

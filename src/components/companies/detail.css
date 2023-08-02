@@ -1,0 +1,63 @@
+.company {
+  padding: 1rem 2rem;
+  max-width: 1000px;
+  margin: 1rem auto 3rem;
+  display: grid;
+  gap: 3rem;
+}
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.intro > * {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.owner,
+.location {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: flex-start;
+}
+
+.owner h3 {
+  font-size: 1.3rem;
+}
+
+.owner h6 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.location span {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.location .icon {
+  font-size: 1.3rem;
+  opacity: 1;
+}
+
+#company-table {
+  background-color: #0284c7;
+}
+
+#title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  background-color: #0284c7;
+}

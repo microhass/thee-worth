@@ -6,13 +6,11 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  color: #fff;
 }
 
-ul {
-  list-style-type: none;
-  display: flex;
-  gap: 20px;
-  text-transform: capitalize;
+body {
+  background-color: #458ace;
 }
 
 a:active,
@@ -47,16 +45,4 @@ button {
   place-items: center;
   height: 20rem;
   font-size: 20px;
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-th,
-td {
-  border: 1px solid #ddd;
-  text-align: left;
-  padding: 8px;
 }

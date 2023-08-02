@@ -7,7 +7,6 @@
 
 </div>
 
-
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
@@ -16,6 +15,7 @@
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
   - [🚀 Live Demo ](#-live-demo-)
+  - [Video Presentation Link](#video-presentation-link)
   - [💻 Getting Started ](#-getting-started-)
     - [Install](#install)
     - [Run tests](#run-tests)
@@ -52,12 +52,13 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-<a href="#"> See Project 🚀 Line link not ready 🛣️⏰</a>
+<a href="https://thee-worth.netlify.app/"> See Project 🚀 </a>
 
+## Video Presentation Link
 
+<a href="https://drive.google.com/file/d/1QgHXrmRMNBaMVMF9wTsyvy7y0PQpN_wu/view?usp=sharing"> React capstone video </a>
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -100,12 +101,9 @@ That's it! With these simple steps, you should be able to get up and running wit
 
 To run tests, run the following command: -->
 
-
-
 ```sh
   npm test
 ```
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -120,7 +118,6 @@ To run tests, run the following command: -->
 - GitHub: [@hassanShakur](https://github.com/hassanShakur)
 - Twitter: [@hassShakur](https://twitter.com/hassShakur)
 - LinkedIn: [@hassanShakur](https://www.linkedin.com/in/hassanShakur)
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -158,9 +155,10 @@ Feel free to check the [issues page](../../issues/).
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 > We would like to thank the Microverse community for their support and guidance throughout this project. Special thanks to our peers and mentors for their constructive feedback and advice.
+>
+> Special thanks also goes to [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio) whos original design idea is from.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- FAQ (optional) -->
 

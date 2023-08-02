@@ -1,0 +1,55 @@
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, auto));
+  padding-top: 3rem;
+  background-color: #458ace;
+}
+
+.card {
+  transition: all 0.3s ease-in-out !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  width: 100%;
+}
+
+#card-container {
+  max-width: 300px;
+}
+
+#card-container:nth-child(even) {
+  background-color: #3085c7;
+}
+
+.card:hover {
+  cursor: pointer;
+  background-color: #299ad3;
+  transform: scale(1.02);
+}
+
+.card-content {
+  display: grid;
+  gap: 1rem;
+  max-width: 200px;
+}
+
+.card-content span {
+  font-size: 1.1rem;
+  text-align: right;
+}
+
+.card-content .icon {
+  font-size: 1.3rem;
+  color: #004eeb;
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: repeat(auto-fit, minmax(170px, auto));
+  }
+
+  #card-container {
+    max-width: 200px;
+  }
+}

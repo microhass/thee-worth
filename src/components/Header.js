@@ -1,36 +1,34 @@
 import React from 'react';
-import { Link, Outlet, NavLink } from 'react-router-dom';
+import { Link, Outlet, useParams } from 'react-router-dom';
+import { TbChevronLeft } from 'react-icons/tb';
 import Header from '../styles/styledHeader';
-import spaceLogo from '../images/planet.png';
+import theeWorthLogo from '../images/logo.png';
+import SearchBar from './SearchBar';
 
-const links = [
-  {
-    name: 'rockets',
-    href: '/',
-  },
-  {
-    name: 'missions',
-    href: '/missions',
-  },
-  {
-    name: 'my profile',
-    href: '/profile',
-  },
-];
+const Layout = () => {
+  const { companyCode } = useParams();
 
-const Layout = () => (
-  <>
-    <Header>
-      <div>
-        <Link to="/">
-          <img src={spaceLogo} alt="Logo" />
-          <h1>Thee Worth</h1>
-        </Link>
-      </div>
-     
-    </Header>
-    <Outlet />
-  </>
-);
+  return (
+    <>
+      <Header>
+        <div>
+          <Link to="/">
+            <img src={theeWorthLogo} alt="Logo" />
+            <h1>Thee Worth</h1>
+            {!!companyCode && (
+              <span>
+                <TbChevronLeft />
+                {' '}
+                Back
+              </span>
+            )}
+          </Link>
+        </div>
+        <SearchBar />
+      </Header>
+      <Outlet />
+    </>
+  );
+};
 
 export default Layout;
