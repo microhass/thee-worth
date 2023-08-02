@@ -1,33 +1,20 @@
 import React from 'react';
-import { Link, Outlet, NavLink } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import Header from '../styles/styledHeader';
-import spaceLogo from '../images/planet.png';
+import theeWorthLogo from '../images/logo.png';
+import SearchBar from './SearchBar';
 
-const links = [
-  {
-    name: 'rockets',
-    href: '/',
-  },
-  {
-    name: 'missions',
-    href: '/missions',
-  },
-  {
-    name: 'my profile',
-    href: '/profile',
-  },
-];
 
 const Layout = () => (
   <>
     <Header>
       <div>
-        <Link to="/">
-          <img src={spaceLogo} alt="Logo" />
+        <Link to='/'>
+          <img src={theeWorthLogo} alt='Logo' />
           <h1>Thee Worth</h1>
         </Link>
       </div>
-     
+      <SearchBar />
     </Header>
     <Outlet />
   </>

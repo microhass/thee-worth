@@ -5,15 +5,20 @@ import Header from './components/Header';
 import Error from './components/Error';
 
 import './App.css';
+import CompanyDetails from './components/companies/CompanyDetails';
 
 const App = () => (
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Header />}>
+      <Route path='/' element={<Header />}>
         <Route index element={<Home />} />
-        <Route index path="/rockets" element={<Home />} />
-        {/* <Route index path="/profile" element={<Profile />} /> */}
-        <Route path="*" element={<Error />} />
+        <Route index path='/home' element={<Home />} />
+        <Route
+          index
+          path='/:companyCode'
+          element={<CompanyDetails />}
+        />
+        <Route path='*' element={<Error />} />
       </Route>
     </Routes>
   </BrowserRouter>
