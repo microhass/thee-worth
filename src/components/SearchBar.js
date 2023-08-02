@@ -1,8 +1,8 @@
 import { Stack, TextField } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { companyActions } from '../redux/companies/companySlice';
 import { useParams } from 'react-router-dom';
+import { companyActions } from '../redux/companies/companySlice';
 
 const SearchBar = () => {
   const [query, setQuery] = useState('');
@@ -11,13 +11,13 @@ const SearchBar = () => {
 
   useEffect(() => {
     dispatch(companyActions.filterData({ query }));
-  }, [query]);
+  }, [query, dispatch]);
 
   return (
     <Stack width={250}>
       <TextField
         label={companyCode ? 'Disabled' : 'Search company'}
-        size='small'
+        size="small"
         fullWidth
         value={query}
         onChange={(e) => setQuery(e.target.value)}

@@ -1,5 +1,4 @@
 import { Link, useParams } from 'react-router-dom';
-import { fetchCompanyDetails } from '../../redux/companyDetails/companyDetailSlice';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { TbMapPin, TbPhoneCall } from 'react-icons/tb';
@@ -15,6 +14,7 @@ import {
   TableRow,
   Typography,
 } from '@mui/material';
+import { fetchCompanyDetails } from '../../redux/companyDetails/companyDetailSlice';
 import './detail.css';
 
 const CompanyDetails = () => {
@@ -31,41 +31,63 @@ const CompanyDetails = () => {
     dispatch(fetchCompanyDetails({ companyCode }));
   }, [companyCode]);
 
-  if (isLoading) return <div className='loading'>Loading...</div>;
+  const mapNum = (key, value) => {
+    if (key === 'Exchange') return value;
 
-  if (isError)
-    return <div className='loading'>Company Not Found</div>;
+    if (key === 'Full Time Employees') {
+      return new Intl.NumberFormat(navigator.language, {}).format(
+        value,
+      );
+    }
+
+    return new Intl.NumberFormat(navigator.language, {
+      style: 'currency',
+      currency: 'USD',
+    }).format(value);
+  };
+
+  if (isLoading) return <div className="loading">Loading...</div>;
+
+  if (isError) {
+    return <div className="loading">Company Not Found</div>;
+  }
 
   return (
-    <div className='company'>
-      <div className='intro'>
-        <Link to={company.website} target='_blank'>
+    <div className="company">
+      <div className="intro">
+        <Link to={company.website} target="_blank">
           <Avatar
             sx={{ width: 50, height: 50 }}
             src={company.image}
-            alt=''
+            alt={company.symbol}
           />
-          <div className='owner'>
+          <div className="owner">
             <h3>{company.name}</h3>
             <h6>{company.ceo}</h6>
           </div>
         </Link>
-        <div className='location'>
+        <div className="location">
           <span>
-            <TbMapPin className='icon' /> {company.address},{' '}
+            <TbMapPin className="icon" />
+            {' '}
+            {company.address}
+            ,
+            {' '}
             {company.country}
           </span>
           <span>
-            <TbPhoneCall className='icon' /> {company.phone}
+            <TbPhoneCall className="icon" />
+            {' '}
+            {company.phone}
           </span>
         </div>
       </div>
 
-      <TableContainer component={Paper} id='company-table'>
+      <TableContainer component={Paper} id="company-table">
         <Table stickyHeader>
           <TableHead>
             <TableRow>
-              <TableCell colSpan={2} id='title'>
+              <TableCell colSpan={2} id="title">
                 Stock & Price Data (In USD)
               </TableCell>
             </TableRow>
@@ -75,17 +97,7 @@ const CompanyDetails = () => {
               <TableRow key={key}>
                 <TableCell>{key}</TableCell>
                 <TableCell>
-                  {key === 'Exchange'
-                    ? value
-                    : key === 'Full Time Employees'
-                    ? new Intl.NumberFormat(
-                        navigator.language,
-                        {}
-                      ).format(value)
-                    : new Intl.NumberFormat(navigator.language, {
-                        style: 'currency',
-                        currency: 'USD',
-                      }).format(value)}
+                  {mapNum(key, value)}
                 </TableCell>
               </TableRow>
             ))}
@@ -93,8 +105,11 @@ const CompanyDetails = () => {
         </Table>
       </TableContainer>
 
-      <Paper id='desc'>
-        <h5>About {company.name}</h5>
+      <Paper id="desc">
+        <h5>
+          About
+          {` ${company.name}`}
+        </h5>
         <Typography>{company.description}</Typography>
       </Paper>
     </div>

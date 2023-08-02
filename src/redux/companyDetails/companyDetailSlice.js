@@ -2,22 +2,21 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const apikey = 'd2e23b8b453a3c91403469a1b257f436';
-// const companiesURL = `http://localhost:5000/worth/list`;
-// const companiesURL = `https://financialmodelingprep.com/api/v3/stock/list?apikey=${apikey}`;
-
-// https://financialmodelingprep.com/api/v3/nasdaq_constituent?apikey=d2e23b8b453a3c91403469a1b257f436
-// https://financialmodelingprep.com/api/v3/dowjones_constituent?apikey=d2e23b8b453a3c91403469a1b257f436
-const companyURL = 'http://localhost:5000/worth/stock';
-const companyURL2 = 'http://localhost:5000/worth/profile';
+const companyURL1 = 'https://financialmodelingprep.com/api/v3/profile/';
+const companyURL2 = 'https://financialmodelingprep.com/api/v3/quote/';
 
 export const fetchCompanyDetails = createAsyncThunk(
   'companyDetails/fetch',
   async ({ companyCode }) => {
-    const details1 = await axios.get(companyURL);
-    const details2 = await axios.get(companyURL2);
+    const details1 = await axios.get(
+      `${companyURL1}${companyCode}?apikey=${apikey}`,
+    );
+    const details2 = await axios.get(
+      `${companyURL2}${companyCode}?apikey=${apikey}`,
+    );
 
     return [].concat(details2.data, details1.data);
-  }
+  },
 );
 
 const initialState = {
@@ -89,7 +88,7 @@ const companyDetailSlice = createSlice({
             { key: 'Year High', value: yearHigh },
           ],
         };
-      }
+      },
     );
   },
 });

@@ -1,14 +1,11 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import configureMockStore from 'redux-mock-store';
+import { BrowserRouter } from 'react-router-dom';
 import Company from '../components/companies/Company';
 import '@testing-library/jest-dom/extend-expect';
-import { BrowserRouter } from 'react-router-dom';
-
-const mockStore = configureMockStore([]);
 
 describe('Company details Component', () => {
-  let company = {
+  const company = {
     symbol: 'AAPL',
     name: 'Apple Inc.',
     sector: 'Technology',
@@ -20,7 +17,7 @@ describe('Company details Component', () => {
     render(
       <BrowserRouter>
         <Company company={company} />
-      </BrowserRouter>
+      </BrowserRouter>,
     );
 
     const symbol = screen.getByText('AAPL');

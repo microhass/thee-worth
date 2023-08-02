@@ -2,22 +2,14 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
-import Companies from '../components/companies';
-import Company from '../components/companies/Company';
-import '@testing-library/jest-dom/extend-expect';
 import { BrowserRouter } from 'react-router-dom';
+import Companies from '../components/companies';
+import '@testing-library/jest-dom/extend-expect';
 
 const mockStore = configureMockStore([]);
 
 describe('Companies Component', () => {
   let store;
-  // let mockCompanies;
-  let company = {
-    symbol: 'AAPL',
-    name: 'Apple Inc.',
-    sector: 'Technology',
-    founded: '12-3-2001',
-  };
 
   beforeEach(() => {
     const mockCompanies = [
@@ -57,9 +49,9 @@ describe('Companies Component', () => {
     render(
       <Provider store={store}>
         <BrowserRouter>
-          <Companies  />
+          <Companies />
         </BrowserRouter>
-      </Provider>
+      </Provider>,
     );
 
     const company1 = screen.getByText('Apple Inc.');
@@ -77,7 +69,7 @@ describe('Companies Component', () => {
     render(
       <Provider store={store}>
         <Companies />
-      </Provider>
+      </Provider>,
     );
 
     const loadingMessage = screen.getByText('Loading...');
