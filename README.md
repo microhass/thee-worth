@@ -58,7 +58,7 @@
 
 ## Video Presentation Link
 
-<a href="https://drive.google.com/file/d/1fZugim9afO_zmPtAEazxJr7Ss5hLzbgm/view?usp=sharing"> React capstone video </a>
+<a href="https://drive.google.com/file/d/1QgHXrmRMNBaMVMF9wTsyvy7y0PQpN_wu/view?usp=sharing"> React capstone video </a>
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
