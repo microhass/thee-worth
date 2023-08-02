@@ -1,11 +1,8 @@
 import styled from 'styled-components';
 
 const Header = styled.header`
-  background-color: #fff;
+  background-color: #0284c7;
   padding: 1rem;
-  max-width: 1200px;
-  margin: 1rem;
-  border-bottom: 1px solid #efefef;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,7 +13,7 @@ const Header = styled.header`
 
   img {
     width: 2rem;
-    margin-right: 1rem
+    margin-right: 1rem;
   }
 
   nav {
@@ -24,7 +21,8 @@ const Header = styled.header`
   }
 
   div,
-  div > *, span {
+  div > *,
+  span {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,7 +37,7 @@ const Header = styled.header`
     border-radius: 5px;
 
     &:hover {
-      background: rgba(0,0,0,0.2)
+      background: rgba(0, 0, 0, 0.2);
     }
   }
 

@@ -20,6 +20,7 @@ const SearchBar = () => {
         size="small"
         fullWidth
         value={query}
+        color="secondary"
         onChange={(e) => setQuery(e.target.value)}
         disabled={!!companyCode}
       />

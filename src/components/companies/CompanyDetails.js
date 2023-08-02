@@ -12,7 +12,6 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-  Typography,
 } from '@mui/material';
 import { fetchCompanyDetails } from '../../redux/companyDetails/companyDetailSlice';
 import './detail.css';
@@ -104,14 +103,6 @@ const CompanyDetails = () => {
           </TableBody>
         </Table>
       </TableContainer>
-
-      <Paper id="desc">
-        <h5>
-          About
-          {` ${company.name}`}
-        </h5>
-        <Typography>{company.description}</Typography>
-      </Paper>
     </div>
   );
 };
