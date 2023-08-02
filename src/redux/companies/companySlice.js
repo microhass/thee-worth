@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const apikey = 'd2e23b8b453a3c91403469a1b257f436';
+const apikey = '21e90de3fc4516f6fdad612169768bfd';
 const companiesURL1 = `https://financialmodelingprep.com/api/v3/nasdaq_constituent?apikey=${apikey}`;
 const companiesURL2 = `https://financialmodelingprep.com/api/v3/dowjones_constituent?apikey=${apikey}`;
 
