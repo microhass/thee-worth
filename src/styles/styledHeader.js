@@ -24,10 +24,23 @@ const Header = styled.header`
   }
 
   div,
-  div > * {
+  div > *, span {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  span {
+    margin-left: 2rem;
+    gap: 0.6rem;
+    font-size: 1.2rem;
+    transition: 0.2s ease;
+    padding: 10px;
+    border-radius: 5px;
+
+    &:hover {
+      background: rgba(0,0,0,0.2)
+    }
   }
 
   @media (min-width: 1000px) {

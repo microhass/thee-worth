@@ -4,6 +4,7 @@ import {
   TbBuildingCommunity,
   TbFocusCentered,
   TbPlant,
+  TbKey,
 } from 'react-icons/tb';
 import {
   Box,
@@ -46,6 +47,11 @@ const Company = ({ company }) => (
               <h6>{company.sector}</h6>
             </span>
             <span>
+              <TbKey className="icon" />
+              <h6>CIK</h6>
+              <h6>{company.cik}</h6>
+            </span>
+            <span>
               <TbPlant className="icon" />
               <h6>Founded</h6>
               <h6>
@@ -68,6 +74,7 @@ Company.propTypes = {
     symbol: PropTypes.string,
     name: PropTypes.string,
     sector: PropTypes.string,
+    cik: PropTypes.string,
     founded: PropTypes.string,
   }),
 };
@@ -77,6 +84,7 @@ Company.defaultProps = {
     symbol: 'X',
     name: 'Company X',
     sector: 'Technology',
+    cik: '001',
     founded: '1-1-2001',
   },
 };
