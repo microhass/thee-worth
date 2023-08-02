@@ -61,23 +61,3 @@ const Company = ({ company }) => {
 };
 
 export default Company;
-
-//  {
-//     "symbol" : "SPY",
-//     "name" : "SPDR S&P 500 ETF Trust",
-//     "price" : 441.4,
-//     "exchange" : "New York Stock Exchange Arca",
-//     "exchangeShortName" : "NYSE",
-//     "type" : "etf"
-//   }
-
-//
-//   symbol: 'AMGN',
-//   name: 'Amgen Inc.',
-//   sector: 'Healthcare',
-//   subSector: 'Healthcare',
-//   headQuarter: 'Thousand Oaks, CA',
-//   dateFirstAdded: '2020-08-31',
-//   cik: '0000318154',
-//   founded: '1980-04-08',
-// },
